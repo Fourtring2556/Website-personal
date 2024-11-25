@@ -1,0 +1,236 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('gambar/bg.jpg'); 
+    background-size: cover; /* Menyesuaikan gambar agar mengisi seluruh layar */
+    background-position: center; /* Menyelaraskan gambar di tengah */
+    background-attachment: fixed; /* Agar gambar tetap saat scroll */
+    margin: 0;
+    height: 50vh;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3b3b3b; /* ubah warna header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table {
+            border-collapse: collapse;
+            width: 100%;
+            color: #fff;
+        }
+        th, td {
+            border: 1px solid rgb(255, 255, 255);
+            text-align: center;
+            padding: 8px;
+        }
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+h2{
+    color: #fff;
+    background-color: #383838;
+    width: 35vh ;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    color: orange; /* ubah warna link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff9800;
+}
+
+main {
+    margin-top: 40px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tata letak artis */
+.artist {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 170, 52, 0.5);
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5vh;
+}
+
+.gambar{
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 170, 52, 0.5);
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5vh;
+    color: #fff;
+    justify-content: space-between;
+    font-size: 50px;
+}
+
+.gambar img{
+    height: 500px;
+}
+
+.artist .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    max-width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #ffcc66; /* ubah warna garis */
+    box-shadow: 0 0 10px rgba(255, 204, 102, 0.5); /* ubah warna bayangan gambar */
+}
+
+.artist .info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist h3 {
+    font-size: 1.6em;
+    color: #fff; /* ubah warna teks judul */
+}
+
+.artist p {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.artist .time {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.artist .video-container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.artist:hover {
+    transform: translateY(-10px); /* Menggeser artis sedikit ke atas */
+    box-shadow: 0 10px 20px rgba(255, 170, 52, 0.8); /* Menambah bayangan lebih besar */
+}
+
+.artist:hover img {
+    transform: scale(1.1); /* Memperbesar gambar */
+    filter: brightness(1.2); /* Mencerahkan gambar sedikit */
+}
+
+.artist h3, .artist p {
+    transition: transform 0.3s ease;
+}
+
+.artist:hover h3, .artist:hover p {
+    transform: translateX(10px); /* Geser teks sedikit ke kanan */
+}
+
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .artist {
+        grid-template-columns: 1fr; /* Ubah layout menjadi satu kolom */
+        padding: 15px;
+    }
+
+    .artist img {
+        max-width: 80%; /* Sesuaikan ukuran gambar agar lebih kecil pada mobile */
+        margin-bottom: 15px;
+    }
+
+    .info-container {
+        padding-left: 0;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Sesuaikan lebar video dengan lebar kontainer */
+        height: 200px; /* Sesuaikan tinggi video */
+    }
+
+    .time {
+        font-size: 0.9em; /* Kecilkan ukuran font waktu tampil */
+    }
+}
+
+/* Tablet Responsiveness */
+@media only screen and (max-width: 1024px) {
+    .artist {
+        grid-template-columns: 1fr 1fr; /* Dua kolom untuk tablet */
+    }
+
+    .artist img {
+        max-width: 90%; /* Gambar sedikit lebih besar pada tablet */
+    }
+
+    .video-container iframe {
+        height: 250px; /* Ukuran video sedikit lebih besar pada tablet */
+    }
+}
