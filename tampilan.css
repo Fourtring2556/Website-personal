@@ -112,6 +112,23 @@ section {
     font-size: 50px;
 }
 
+.brosur{
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 170, 52, 0.5);
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5vh;
+    color: #fff;
+    justify-content: space-between;
+    font-size: 50px;
+}
+
+
 .gambar img{
     height: 500px;
 }
@@ -198,12 +215,18 @@ section {
 
     .artist {
         grid-template-columns: 1fr; /* Ubah layout menjadi satu kolom */
-        padding: 15px;
+        padding: auto;
+        display: inline-block;
+    }
+
+    .brosur img{
+        height: 250px;
     }
 
     .artist img {
-        max-width: 80%; /* Sesuaikan ukuran gambar agar lebih kecil pada mobile */
+        max-width: 10%; /* Sesuaikan ukuran gambar agar lebih kecil pada mobile */
         margin-bottom: 15px;
+        height: 200px;
     }
 
     .info-container {
